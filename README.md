@@ -30,7 +30,7 @@ Initial example look and feel used.
 
 In addition to the initial example, I added the possiblity to load screens with sensors and switches based on a configuration file. This JSON file contain as well the HA connection information (url, username, password). So there is no need to recompile the firmware to add new items. 
 
-## Screens types
+### Screens types
 
 Different type of pages are support defined as grid:
 - 1x1 (1 coluum of 1 Xlarge UI item)
