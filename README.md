@@ -14,16 +14,7 @@ Initial example look and feel used.
     <img src="./docs/Home Assistant Control(OFF).png" width="480"/>
 </figure>
 
-## Additional Features
 
-### UI Items
-
-1. Sensor : Display sensor data and select one of the 4 icons
-2. Switch button : Display a switch button (Switch type in mqtt)
-2. Switch toggle : Display a switch toggle (Switch type in mqtt)
-3. Switch slider : Display a switch slider (Number type in mqtt)
-4. Switch arc : Display a switch arc (Number type in mqtt)
-5. Switch dropdown : Display a switch dropdown (Selec type in mqtt)
 
 ## Global Functions
 - [x] Time display.
@@ -35,16 +26,41 @@ Initial example look and feel used.
 - [x] Home Assistant data.
 - [x] Home Assistant control.
 
-## How to modify the UI elements
+## Additional Features
 
-The UI templates are based on squareline (see sub folder with projects) with different UI elements. 
+In addition to the initial example, I added the possiblity to load screens with sensors and switches based on a configuration file. This JSON file contain as well the HA connection information (url, username, password). So there is no need to recompile the firmware to add new items. 
+
+## Screens types
+
+Different type of pages are support defined as grid:
+- 1x1 (1 coluum of 1 Xlarge UI item)
+- 1x2 (1 coloum of 2 large UI items)
+- 1x3 (1 coloum of 3 medium UI items)
+- 1x4 (1 coloum of 4 small UI items)
+- 2x1 (2 coloums of 1 Xlarge UI item)
+- 2x2 (2 coloums of 2 large UI items)
+- 2x3 (2 coloums of 3 medium UI items)
+- 2x4 (2 coloums of 4 small UI items)
+
+### Type of UI items
+
+1. Sensor : Display sensor data and select one of the 4 icons
+2. Switch button : Display a switch button (Switch type in mqtt)
+2. Switch toggle : Display a switch toggle (Switch type in mqtt)
+3. Switch slider : Display a switch slider (Number type in mqtt)
+4. Switch arc : Display a switch arc (Number type in mqtt)
+5. Switch dropdown : Display a switch dropdown (Selec type in mqtt)
+
+## How to modify the UI templates
+
+The UI templates are based on squareline (see /squareline/ sub folder with projects) with different UI elements. 
 You can find few projects for large, medium and small screens. You can modify the UI elements, generate the code and modify the `./main/ui/screens/ui_sreen_ha_templates` files.
 
 ## How to use this version
 
 Please first read the [User Guide](https://wiki.seeedstudio.com/SenseCAP_Indicator_Get_Started) of the SenseCAP Indicator Board to learn about its software and hardware information.
 
-### Configuration file
+### Configuration file JSON
 
 The configuration file is stored in the SDCard and load by the RP2040. The ESP32 MCU will request the configuration file from the RP2040 and generate screens, sensors and swtiches.
 
@@ -90,7 +106,8 @@ Structure of the config file :
 ```
 
 ### Home Assistant Configuration (mqtt.yaml)
-You need to configure Home assistant to receive data from the Indicator device. The following is an example of the mqtt.yaml file.
+
+You need to configure Home assistant to receive and send data from/to the Indicator device. The following is an example of the mqtt.yaml file.
 
 ```yaml
 sensor:
@@ -143,7 +160,7 @@ number:
 
 ### Home Assistant Automation for senors data publishing
 
-If you want to display any information from HA on SenseCap Indicator screesn (like temp, humidity of other sensors, rooms), you need to create an automation to publish the data to the Indicator device.
+If you want to display any information from HA on SenseCap Indicator screens (like temp, humidity of other sensors, rooms), you need to create an automation to publish the data to the Indicator device.
 
 *Example of the automation*
 Publish a temperature and humidity sensor data on MQTT every minute (time_pattern)
