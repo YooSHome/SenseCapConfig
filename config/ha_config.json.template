@@ -1,0 +1,95 @@
+{
+    "url": "mqtt://<url>",
+    "username": "<username>",
+    "password": "<password>",
+    "pages": [
+        {
+            "name": "Bedroom",
+            "label": "Bedroom",
+            "type": "2x2",
+            "sensors": [
+                {
+                    "name": "Temperature",
+                    "label": "Temperature",
+                    "unit": "°C",
+                    "key": "bedroom_temperature",
+                    "x": "1",
+                    "y": "1",
+                    "icon": "temperature",
+                    "size": "large"
+                },
+                {
+                    "name": "Humidity",
+                    "label": "Humidity",
+                    "unit": "%",
+                    "key": "bedroom_humidity",
+                    "x": "2",
+                    "y": "1",
+                    "icon": "humidity",
+                    "size": "large"
+                }
+            ],
+            "switches": [
+                {
+                    "name": "Light",
+                    "label": "Light",
+                    "key": "bedroom_light",
+                    "x": "1",
+                    "y": "2",
+                    "type": "button",
+                    "size": "large",                 
+                    "unit": ""   
+                },
+                {
+                    "name": "Fan",
+                    "label": "Fan",
+                    "key": "bedroom_fan",
+                    "x": "2",
+                    "y": "2",
+                    "type": "toggle",
+                    "size": "large",
+                    "unit": ""
+                }
+            ]
+        },
+        {
+            "name": "Living Room",
+            "label": "Living Room",
+            "type": "2x2",
+            "sensors": [
+                {
+                    "name": "Temperature",
+                    "label": "Temperature",
+                    "unit": "°C",
+                    "key": "living_room_temperature",
+                    "x": "1",
+                    "y": "1",
+                    "icon": "co2",
+                    "size": "large"
+                }
+            ],
+            "switches": [
+                {
+                    "name": "Lamp",
+                    "label": "Lamp",
+                    "key": "living_room_lamp",
+                    "x": "2",
+                    "y": "1",
+                    "type": "arc",
+                    "size": "large",
+                    "unit": ""
+                },
+                {
+                    "name": "Lamp 2",
+                    "label": "Lamp 2",
+                    "key": "living_room_lamp2",
+                    "x": "1",
+                    "y": "2",
+                    "type": "slider",
+                    "size": "large",
+                    "unit": ""
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+sensor:
+  # SenseCAP Sensors
+  - unique_id: SC_temperature
+    name: "SC Temperature"
+    state_topic: "indicator/sensor"
+    #suggested_display_precision: 1
+    unit_of_measurement: "°C"
+    value_template: "{{ value_json.temp }}"
+  - unique_id: SC_humidity
+    name: "SC Humidity"
+    state_topic: "indicator/sensor"
+    unit_of_measurement: "%"
+    value_template: "{{ value_json.humidity }}"
+  - unique_id: SC_co2
+    name: "SC CO2"
+    state_topic: "indicator/sensor"
+    unit_of_measurement: "ppm"
+    value_template: "{{ value_json.co2 }}"
+  - unique_id: SC_tvoc
+    name: "SC tVOC"
+    state_topic: "indicator/sensor"
+    unit_of_measurement: ""
+    value_template: "{{ value_json.tvoc }}"
+  # Additonal Sensors
+  - unique_id: bedroom_temperature
+    name: "Bedroom Temperature"
+    state_topic: "indicator/sensor"
+    unit_of_measurement: "°C"
+    value_template: "{{ value_json.bedroom_temperature }}"
+switch:
+  - unique_id: bedroom_light
+    name: "Bedroom Light"
+    state_topic: "indicator/switch/state"
+    command_topic: "indicator/switch/set"
+    value_template: "{{ value_json.bedroom_light }}"
+    payload_on: '{"bedroom_light":1}'
+    payload_off: '{"bedroom_light":0}'
+    state_on: 1
+    state_off: 0
+  - unique_id: bedroom_fan
+    name: "Bedroom Fan"
+    state_topic: "indicator/switch/state"
+    command_topic: "indicator/switch/set"
+    value_template: "{{ value_json.bedroom_fan }}"
+    payload_on: '{"switch2":1}'
+    payload_off: '{"switch2":0}'
+    state_on: 1
+    state_off: 0
+number:
+  - unique_id: living_room_lamp
+    name: "Living Room Lamp"
+    state_topic: "indicator/switch/state"
+    command_topic: "indicator/switch/set"
+    command_template: '{"living_room_lamp": {{ value }} }'
+    value_template: "{{ value_json.living_room_lamp }}"
+  - unique_id: living_room_lamp2
+    name: "Living Room Lamp 2"
+    state_topic: "indicator/switch/state"
+    command_topic: "indicator/switch/set"
+    command_template: '{"living_room_lamp2": {{ value }} }'
+    value_template: "{{ value_json.living_room_lamp2 }}"
+

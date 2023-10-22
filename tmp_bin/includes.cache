@@ -1,0 +1,387 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\cores\\rp2040"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\variants\\seeed_indicator_rp2040"
+  },
+  {
+    "Sourcefile": "D:\\Dev\\YSHome\\SenseCapConfig\\tmp_bin\\sketch\\RP2040.ino.cpp",
+    "Include": "AHT20.h",
+    "Includepath": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Seeed_Arduino_AHT20\\src"
+  },
+  {
+    "Sourcefile": "D:\\Dev\\YSHome\\SenseCapConfig\\tmp_bin\\sketch\\RP2040.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\Wire\\src"
+  },
+  {
+    "Sourcefile": "D:\\Dev\\YSHome\\SenseCapConfig\\tmp_bin\\sketch\\RP2040.ino.cpp",
+    "Include": "Adafruit_Sensor.h",
+    "Includepath": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor"
+  },
+  {
+    "Sourcefile": "D:\\Dev\\YSHome\\SenseCapConfig\\tmp_bin\\sketch\\RP2040.ino.cpp",
+    "Include": "PacketSerial.h",
+    "Includepath": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\PacketSerial\\src"
+  },
+  {
+    "Sourcefile": "D:\\Dev\\YSHome\\SenseCapConfig\\tmp_bin\\sketch\\RP2040.ino.cpp",
+    "Include": "SD.h",
+    "Includepath": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\SD\\src"
+  },
+  {
+    "Sourcefile": "D:\\Dev\\YSHome\\SenseCapConfig\\tmp_bin\\sketch\\RP2040.ino.cpp",
+    "Include": "SDFS.h",
+    "Includepath": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\SDFS\\src"
+  },
+  {
+    "Sourcefile": "D:\\Dev\\YSHome\\SenseCapConfig\\tmp_bin\\sketch\\RP2040.ino.cpp",
+    "Include": "SPI.h",
+    "Includepath": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\SPI\\src"
+  },
+  {
+    "Sourcefile": "D:\\Dev\\YSHome\\SenseCapConfig\\tmp_bin\\sketch\\RP2040.ino.cpp",
+    "Include": "SdFat.h",
+    "Includepath": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src"
+  },
+  {
+    "Sourcefile": "D:\\Dev\\YSHome\\SenseCapConfig\\tmp_bin\\sketch\\RP2040.ino.cpp",
+    "Include": "SensirionI2CScd4x.h",
+    "Includepath": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_I2C_SCD4x\\src"
+  },
+  {
+    "Sourcefile": "D:\\Dev\\YSHome\\SenseCapConfig\\tmp_bin\\sketch\\RP2040.ino.cpp",
+    "Include": "SensirionCore.h",
+    "Includepath": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_Core\\src"
+  },
+  {
+    "Sourcefile": "D:\\Dev\\YSHome\\SenseCapConfig\\tmp_bin\\sketch\\RP2040.ino.cpp",
+    "Include": "SensirionI2CSgp40.h",
+    "Includepath": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_I2C_SGP40\\src"
+  },
+  {
+    "Sourcefile": "D:\\Dev\\YSHome\\SenseCapConfig\\tmp_bin\\sketch\\RP2040.ino.cpp",
+    "Include": "VOCGasIndexAlgorithm.h",
+    "Includepath": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_Gas_Index_Algorithm\\src"
+  },
+  {
+    "Sourcefile": "D:\\Dev\\YSHome\\SenseCapConfig\\tmp_bin\\sketch\\RP2040.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Seeed_Arduino_AHT20\\src\\ATH20.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\Wire\\src\\Wire.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor\\Adafruit_Sensor.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\SD\\src\\SD.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\SDFS\\src\\SDFS.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\SPI\\src\\SPI.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\ExFatLib\\ExFatDbg.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\ExFatLib\\ExFatFile.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\ExFatLib\\ExFatFilePrint.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\ExFatLib\\ExFatFileWrite.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\ExFatLib\\ExFatFormatter.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\ExFatLib\\ExFatName.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\ExFatLib\\ExFatPartition.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\ExFatLib\\ExFatVolume.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\FatLib\\FatDbg.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\FatLib\\FatFile.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\FatLib\\FatFileLFN.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\FatLib\\FatFilePrint.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\FatLib\\FatFileSFN.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\FatLib\\FatFormatter.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\FatLib\\FatName.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\FatLib\\FatPartition.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\FatLib\\FatVolume.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\FreeStack.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\FsLib\\FsFile.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\FsLib\\FsNew.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\FsLib\\FsVolume.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\MinimumSerial.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\SdCard\\SdCardInfo.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\SdCard\\SdSpiCard.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\SdCard\\SdioTeensy.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\SpiDriver\\SdSpiArtemis.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\SpiDriver\\SdSpiChipSelect.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\SpiDriver\\SdSpiDue.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\SpiDriver\\SdSpiESP.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\SpiDriver\\SdSpiParticle.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\SpiDriver\\SdSpiSTM32.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\SpiDriver\\SdSpiSTM32Core.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\SpiDriver\\SdSpiTeensy3.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\common\\FmtNumber.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\common\\FsCache.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\common\\FsDateTime.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\common\\FsName.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\common\\FsStructs.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\common\\FsUtf.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\common\\upcase.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\iostream\\StdioStream.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\iostream\\StreamBaseClass.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\iostream\\istream.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\3.3.2\\libraries\\ESP8266SdFat\\src\\iostream\\ostream.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_I2C_SCD4x\\src\\SensirionI2CScd4x.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_Core\\src\\SensirionCrc.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_Core\\src\\SensirionErrors.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_Core\\src\\SensirionI2CCommunication.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_Core\\src\\SensirionI2CTxFrame.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_Core\\src\\SensirionRxFrame.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_Core\\src\\SensirionShdlcCommunication.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_Core\\src\\SensirionShdlcTxFrame.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_I2C_SGP40\\src\\SensirionI2CSgp40.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_Gas_Index_Algorithm\\src\\SensirionGasIndexAlgorithm.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_Gas_Index_Algorithm\\src\\VOCGasIndexAlgorithm.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\info\\OneDrive\\Documents\\Arduino\\libraries\\Sensirion_Gas_Index_Algorithm\\src\\algorithm\\sensirion_gas_index_algorithm.c",
+    "Include": "",
+    "Includepath": null
+  }
+]
