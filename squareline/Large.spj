@@ -6671,7 +6671,8 @@
             "InheritedType": 11
           }
         ],
-        "saved_objtypeKey": "SCREEN"
+        "saved_objtypeKey": "SCREEN",
+        "tree_closed": true
       },
       {
         "guid": "GUID23708848-621977S942131",
@@ -7756,7 +7757,6 @@
               },
               {
                 "nid": 131730028,
-                "flags": 1048576,
                 "strtype": "OBJECT/States",
                 "InheritedType": 1
               },
@@ -7824,6 +7824,31 @@
                       },
                       {
                         "nid": -855313510,
+                        "strtype": "_style/Bg_Color",
+                        "intarray": [
+                          40,
+                          40,
+                          40,
+                          255
+                        ],
+                        "InheritedType": 7
+                      }
+                    ],
+                    "InheritedType": 1
+                  },
+                  {
+                    "nid": 797460417,
+                    "strtype": "_style/StyleState",
+                    "strval": "CHECKED",
+                    "childs": [
+                      {
+                        "nid": -1796599110,
+                        "strtype": "_style/Bg_Radius",
+                        "integer": 12,
+                        "InheritedType": 6
+                      },
+                      {
+                        "nid": 446793253,
                         "strtype": "_style/Bg_Color",
                         "intarray": [
                           40,
@@ -9602,7 +9627,7 @@
                   {
                     "nid": 1339530638,
                     "strtype": "LABEL/Text",
-                    "strval": "temp",
+                    "strval": "%",
                     "InheritedType": 10
                   },
                   {
@@ -11156,8 +11181,8 @@
                     "flags": 17,
                     "strtype": "OBJECT/Position",
                     "intarray": [
-                      0,
-                      -50
+                      -4,
+                      -54
                     ],
                     "InheritedType": 7
                   },
@@ -11371,7 +11396,7 @@
                   {
                     "nid": 1340194534,
                     "strtype": "LABEL/Text",
-                    "strval": "24.5 °C",
+                    "strval": "24.5",
                     "InheritedType": 10
                   },
                   {
@@ -11392,6 +11417,12 @@
                               255
                             ],
                             "InheritedType": 7
+                          },
+                          {
+                            "nid": 290080122,
+                            "strtype": "_style/Text_Align",
+                            "strval": "CENTER",
+                            "InheritedType": 3
                           },
                           {
                             "nid": 809877861,
@@ -13492,7 +13523,7 @@
     "theme_color2": 0,
     "exportFolderPath": "D:\\Dev\\YSHome\\SenseCapConfig\\squareline\\Large Assets",
     "projectExportFolderPath": "D:\\Dev\\YSHome\\SenseCapConfig\\squareline\\Large Assets",
-    "backup_cnt": 56,
+    "backup_cnt": 58,
     "autosave_cnt": 0,
     "lvgl_version": "8.3.6",
     "callfuncsexport": "C_FILE",

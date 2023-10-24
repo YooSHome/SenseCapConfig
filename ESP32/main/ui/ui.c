@@ -240,7 +240,7 @@ void ui_event_screen_sensor(lv_event_t *e)
             // dont change screen
             return;
         }
-        _ui_screen_change(screens[0].page_obj, LV_SCR_LOAD_ANIM_MOVE_RIGHT, 200, 0);
+        _ui_screen_change(screens[0].page_obj, LV_SCR_LOAD_ANIM_MOVE_LEFT, 200, 0);
         //_ui_screen_change(ui_page_obj, LV_SCR_LOAD_ANIM_MOVE_LEFT, 200, 0);
     }
     if (event_code == LV_EVENT_GESTURE && lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_TOP)

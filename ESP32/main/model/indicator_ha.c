@@ -1,8 +1,8 @@
 #include "indicator_ha.h"
 #include "cJSON.h"
 #include "indicator_ha_config.h"
-#include "ui/screens/ui_screen_ha_auto.h"
 #include "nvs.h"
+#include "ui/screens/ui_screen_ha_auto.h"
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/queue.h"
@@ -68,7 +68,8 @@ static void ha_entites_init(void)
     ha_sensor_entites_num = all_sensors_count;
 
     // loop in all_sensors
-    for(int i=0; i<all_sensors_count; i++) {
+    for (int i = 0; i < all_sensors_count; i++)
+    {
         ha_sensor_entites[i].index = i;
         ha_sensor_entites[i].key = all_sensors[i].ha_key;
         ha_sensor_entites[i].topic = CONFIG_TOPIC_SENSOR_DATA;
@@ -80,50 +81,14 @@ static void ha_entites_init(void)
     switch_state = malloc(sizeof(int) * all_switches_count);
 
     // loop in all_switches
-    for(int i=0; i<all_switches_count; i++) {
+    for (int i = 0; i < all_switches_count; i++)
+    {
         ha_switch_entites[i].index = i;
         ha_switch_entites[i].key = all_switches[i].ha_key;
         ha_switch_entites[i].topic_set = CONFIG_TOPIC_SWITCH_SET;
         ha_switch_entites[i].topic_state = CONFIG_TOPIC_SWITCH_STATE;
         ha_switch_entites[i].qos = CONFIG_TOPIC_SWITCH_QOS;
     }
-
-    // // parse the global config for pages
-    // for (int i = 0; i < __g_ha_config.page_count; i++)
-    // {
-    //     ha_config_page_t *page = &__g_ha_config.pages[i];
-
-    //     // alloc memory for sensor entites
-    //     ha_sensor_entites = malloc(sizeof(ha_sensor_entity_t) * page->sensor_count);
-    //     ha_sensor_entites_num += page->sensor_count;
-
-    //     for (int j = 0; j < page->sensor_count; j++)
-    //     {
-    //         ha_config_page_sensor_t *sensor = &page->sensors[j];
-    //         ha_sensor_entites[j].index = j;
-    //         ha_sensor_entites[j].key = sensor->ha_key;
-    //         ha_sensor_entites[j].topic = CONFIG_TOPIC_SENSOR_DATA;
-    //         ha_sensor_entites[j].qos = CONFIG_TOPIC_SENSOR_DATA_QOS;
-    //     }
-
-    //     // alloc memory for switch entites
-    //     ha_switch_entites = malloc(sizeof(ha_switch_entity_t) * page->switch_count);
-    //     ha_switch_entites_num += page->switch_count;
-
-    //     // Init the switch state table (alloc memory and set to zero)
-    //     switch_state = malloc(sizeof(int) * page->switch_count);
-    //     memset(switch_state, 0, sizeof(int) * page->switch_count);
-
-    //     for (int j = 0; j < page->switch_count; j++)
-    //     {
-    //         ha_config_page_switch_t *switchItem = &page->switches[j];
-    //         ha_switch_entites[j].index = j;
-    //         ha_switch_entites[j].key = switchItem->ha_key;
-    //         ha_switch_entites[j].topic_set = CONFIG_TOPIC_SWITCH_SET;
-    //         ha_switch_entites[j].topic_state = CONFIG_TOPIC_SWITCH_STATE;
-    //         ha_switch_entites[j].qos = CONFIG_TOPIC_SWITCH_QOS;
-    //     }
-    // }
 }
 
 /**
@@ -483,7 +448,7 @@ static void __view_event_handler(void *handler_args, esp_event_base_t base, int3
             break;
         }
 #if DEBUG_HA
-        ESP_LOGI(TAG, "event: VIEW_EVENT_HA_SWITCH_ST");
+        ESP_LOGI(TAG, "event: VIEW_EVENT_HA_SWITCH_SET");
 #endif
 
         struct view_data_ha_switch_data *p_data = (struct view_data_ha_switch_data *)event_data;
@@ -493,12 +458,14 @@ static void __view_event_handler(void *handler_args, esp_event_base_t base, int3
         memset(data_buf, 0, sizeof(data_buf));
 
         //   char *topic_state = ha_switch_entites[p_data->index].topic_state;
-        char *key = ha_switch_entites[p_data->index].key;
+        char *key = all_switches[p_data->index].ha_key;
 
         len = snprintf(data_buf, sizeof(data_buf), "{\"%s\": %d}", key, (int)p_data->value);
         esp_mqtt_client_publish(mqtt_client, CONFIG_TOPIC_SWITCH_STATE, data_buf, len, 0, 0);
 
-         if (p_data->value < ha_switch_entites_num)
+        ESP_LOGI(TAG, "MQTT set switch %d: %d", p_data->index, p_data->value);
+
+        if (p_data->index < ha_switch_entites_num)
         {
             switch_state[p_data->index] = p_data->value;
         }

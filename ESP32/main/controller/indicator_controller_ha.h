@@ -8,15 +8,7 @@
 extern "C" {
 #endif
 
-// typedef struct user_data_ha
-// {
-//     int index;
-// } user_data_ha_t;
-
-
 int indicator_controller_ha_init(void);
-
-
 
 #ifdef __cplusplus
 }

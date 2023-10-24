@@ -33,6 +33,9 @@ void ui_ha_switches_screen_init(void)
     lv_obj_set_style_radius(ui_Button, 12, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_color(ui_Button, lv_color_hex(0x282828), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_Button, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui_Button, 12, LV_PART_MAIN | LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui_Button, lv_color_hex(0x282828), LV_PART_MAIN | LV_STATE_CHECKED);
+    lv_obj_set_style_bg_opa(ui_Button, 255, LV_PART_MAIN | LV_STATE_CHECKED);
 
     ui_button_logo = lv_img_create(ui_Button);
     lv_img_set_src(ui_button_logo, &ui_img_ic_switch2_off_png);
@@ -133,7 +136,7 @@ void ui_ha_switches_screen_init(void)
     lv_obj_set_y(ui_slider_unit, 23);
     lv_obj_set_align(ui_slider_unit, LV_ALIGN_LEFT_MID);
     lv_label_set_long_mode(ui_slider_unit, LV_LABEL_LONG_DOT);
-    lv_label_set_text(ui_slider_unit, "temp");
+    lv_label_set_text(ui_slider_unit, "%");
     lv_obj_set_style_text_color(ui_slider_unit, lv_color_hex(0xECBF41), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_slider_unit, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui_slider_unit, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -204,12 +207,13 @@ void ui_ha_switches_screen_init(void)
     ui_arc_data = lv_label_create(ui_arc);
     lv_obj_set_width(ui_arc_data, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_arc_data, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_arc_data, 0);
-    lv_obj_set_y(ui_arc_data, -50);
+    lv_obj_set_x(ui_arc_data, -4);
+    lv_obj_set_y(ui_arc_data, -54);
     lv_obj_set_align(ui_arc_data, LV_ALIGN_BOTTOM_MID);
-    lv_label_set_text(ui_arc_data, "24.5 °C");
+    lv_label_set_text(ui_arc_data, "24.5");
     lv_obj_set_style_text_color(ui_arc_data, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_arc_data, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui_arc_data, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_arc_data, &lv_font_montserrat_24, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_add_event_cb(ui_slider_btn, ui_event_slider_btn, LV_EVENT_ALL, NULL);

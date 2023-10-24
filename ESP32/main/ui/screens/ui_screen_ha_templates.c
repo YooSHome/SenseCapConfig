@@ -118,6 +118,9 @@ void create_sensor_button(int size, lv_obj_t *parent, ha_sensor_t *sensor, int b
     lv_obj_set_style_radius(sensor->btn, 12, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_color(sensor->btn, lv_color_hex(0x282828), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(sensor->btn, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(sensor->btn, 12, LV_PART_MAIN | LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(sensor->btn, lv_color_hex(0x282828), LV_PART_MAIN | LV_STATE_CHECKED);
+    lv_obj_set_style_bg_opa(sensor->btn, 255, LV_PART_MAIN | LV_STATE_CHECKED);
 
     sensor->logo = lv_img_create(sensor->btn);
     lv_img_set_src(sensor->logo, icon_img);
@@ -260,8 +263,6 @@ void ui_event_btn(lv_event_t *e)
         _ui_slider_set_text_value(data->data_label, target, data->prefix, data->postfix);
     }
 
-    // free user data
-    // free(data);
 }
 
 void create_switch_arc(int size, lv_obj_t *parent, ha_switch_t *switch_, int bt_x, int bt_y, char *label, char *unit)

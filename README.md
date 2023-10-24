@@ -14,7 +14,9 @@ Initial example look and feel used.
     <img src="./docs/Home Assistant Control(OFF).png" width="480"/>
 </figure>
 
+## System Atrchitecture
 
+<img src="./docs/SenceCapConfig.png">
 
 ## Global Functions
 - [x] Time display.

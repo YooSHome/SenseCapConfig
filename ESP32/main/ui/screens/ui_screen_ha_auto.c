@@ -306,6 +306,7 @@ void switch_create(lv_obj_t *parent, char *name, char *label, char *icon, int si
 
     // store the page in the switch struct
     all_switches[i].page = parent;
+    all_switches[i].type = type;
     // store the ha key
     strcpy(all_switches[i].ha_key, ha_key);
 

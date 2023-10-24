@@ -56,3 +56,4 @@ dkms.conf
 tmp_bin/
 build/
 *ha_config.json
+squareline/backup/*
