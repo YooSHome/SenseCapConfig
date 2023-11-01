@@ -54,7 +54,12 @@ int cnt = 0;
 int i = 0;
 bool sd_init_flag = 0;
 
-// sensor data send to  esp32
+/**
+ * Sends sensor data of a specified type and value.
+ *
+ * @param type The type of sensor data being sent.
+ * @param data The value of the sensor data being sent.
+ */
 void sensor_data_send(uint8_t type, float data)
 {
     uint8_t data_buf[32] = {0};
@@ -78,7 +83,16 @@ void sensor_data_send(uint8_t type, float data)
 #endif
 }
 
-// send file to esp32
+/**
+ * @brief Sends sensor data to a file.
+ * 
+ * This function sends sensor data of a specified type to a file. The data is passed as a character array
+ * and its length is also specified. 
+ * 
+ * @param type The type of sensor data being sent.
+ * @param data A pointer to the character array containing the sensor data.
+ * @param len The length of the sensor data in bytes.
+ */
 void sensor_file_send(uint8_t type, char *data, int len)
 {
     uint8_t data_buf[32] = {0};
@@ -107,6 +121,11 @@ void sensor_file_send(uint8_t type, char *data, int len)
 #endif
 }
 
+/**
+ * Prints the hexadecimal representation of a 16-bit unsigned integer to the serial monitor.
+ *
+ * @param value The 16-bit unsigned integer to print in hexadecimal format.
+ */
 void printUint16Hex(uint16_t value)
 {
     Serial.print(value < 4096 ? "0" : "");
@@ -115,6 +134,13 @@ void printUint16Hex(uint16_t value)
     Serial.print(value, HEX);
 }
 
+/**
+ * @brief Prints the serial number of the device.
+ * 
+ * @param serial0 The first 16-bit serial number.
+ * @param serial1 The second 16-bit serial number.
+ * @param serial2 The third 16-bit serial number.
+ */
 void printSerialNumber(uint16_t serial0, uint16_t serial1, uint16_t serial2)
 {
     Serial.print("Serial: 0x");
@@ -124,12 +150,18 @@ void printSerialNumber(uint16_t serial0, uint16_t serial1, uint16_t serial2)
     Serial.println();
 }
 
+/**
+ * Turns on power to the sensor.
+ */
 void sensor_power_on(void)
 {
     pinMode(18, OUTPUT);
     digitalWrite(18, HIGH);
 }
 
+/**
+ * Turns off power to the sensor.
+ */
 void sensor_power_off(void)
 {
     pinMode(18, OUTPUT);
@@ -147,11 +179,23 @@ uint16_t compensationT = defaultCompenstaionT;
 
 /************************ aht  temp & humidity ****************************/
 
+/**
+ * Initializes the AHT20 temperature and humidity sensor.
+ */
 void sensor_aht_init(void)
 {
     AHT.begin();
 }
 
+/**
+ * @brief Gets the temperature and humidity readings from the AHT20 sensor.
+ * 
+ * This function reads the temperature and humidity values from the AHT20 sensor
+ * and stores them in the global variables `temperature` and `humidity`.
+ * 
+ * @note This function assumes that the AHT20 sensor has been initialized and is
+ * ready to read data.
+ */
 void sensor_aht_get(void)
 {
 
@@ -197,6 +241,9 @@ void sensor_aht_get(void)
 
 /************************ sgp40 tvoc  ****************************/
 
+/**
+ * Initializes the SGP40 sensor.
+ */
 void sensor_sgp40_init(void)
 {
     uint16_t error;
@@ -245,6 +292,13 @@ void sensor_sgp40_init(void)
     }
 }
 
+/**
+ * @brief Gets the sensor data from the SGP40 sensor.
+ * 
+ * This function retrieves the sensor data from the SGP40 sensor and stores it in a global variable.
+ * 
+ * @return void
+ */
 void sensor_sgp40_get(void)
 {
     uint16_t error;
@@ -294,6 +348,9 @@ void sensor_sgp40_get(void)
 
 /************************ scd4x  co2 ****************************/
 
+/**
+ * Initializes the SCD4x sensor.
+ */
 void sensor_scd4x_init(void)
 {
     uint16_t error;
@@ -336,6 +393,16 @@ void sensor_scd4x_init(void)
     // scd4x.powerDown();
 }
 
+/**
+ * @brief Gets sensor data from the SCD4x sensor.
+ * 
+ * This function retrieves data from the SCD4x sensor and stores it in a buffer.
+ * The data can then be read from the buffer using the `sensor_scd4x_read` function.
+ * 
+ * @note This function assumes that the SCD4x sensor has already been initialized.
+ * 
+ * @return None.
+ */
 void sensor_scd4x_get(void)
 {
     uint16_t error;
@@ -394,14 +461,25 @@ void sensor_scd4x_get(void)
 
 #define Buzzer 19 // Buzzer GPIO
 
+/**
+ * Initializes the beep function.
+ */
 void beep_init(void)
 {
     pinMode(Buzzer, OUTPUT);
 }
+
+/**
+ * Turns off the beep sound.
+ */
 void beep_off(void)
 {
     digitalWrite(19, LOW);
 }
+
+/**
+ * Turns on the beep sound.
+ */
 void beep_on(void)
 {
     analogWrite(Buzzer, 127);
@@ -411,6 +489,11 @@ void beep_on(void)
 
 /************************ grove  ****************************/
 
+/**
+ * Reads the analog voltage from the Grove ADC and prints the result to the serial monitor.
+ * 
+ * @return void
+ */
 void grove_adc_get(void)
 {
     String dataString = "";
@@ -429,6 +512,12 @@ void grove_adc_get(void)
 
 static bool shutdown_flag = false;
 
+/**
+ * @brief Callback function that is called when a packet is received.
+ * 
+ * @param buffer Pointer to the buffer containing the received packet.
+ * @param size Size of the received packet in bytes.
+ */
 void onPacketReceived(const uint8_t *buffer, size_t size)
 {
 
@@ -521,6 +610,15 @@ void onPacketReceived(const uint8_t *buffer, size_t size)
 }
 
 /************************ setup & loop ****************************/
+
+
+/**
+ * @brief Initializes the RP2040 board and sets it up for use.
+ * 
+ * This function is called once when the board is powered on or reset. It initializes
+ * any necessary hardware and sets up the board for use. Any pins or peripherals that
+ * need to be used should be configured in this function.
+ */
 void setup()
 {
     Serial.begin(115200);
@@ -591,6 +689,11 @@ void setup()
     // send file
 }
 
+/**
+ * The main loop function that runs repeatedly while the program is executing.
+ * This function is responsible for executing the main program logic and should
+ * be used to perform any necessary tasks or operations.
+ */
 void loop()
 {
     if (i > 5000)
