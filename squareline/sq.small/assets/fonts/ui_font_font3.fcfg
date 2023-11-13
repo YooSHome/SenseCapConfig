@@ -1,0 +1,16 @@
+{
+  "codename": "font3",
+  "ttf_path": "/assets/fonts/LibraSans-Bold.ttf",
+  "bin_path": "/assets/fonts/ui_font_font3.bin",
+  "c_path": "/assets/fonts/ui_font_font3.c",
+  "cfg_path": "/assets/fonts/ui_font_font3.fcfg",
+  "size": 50,
+  "bpp": 8,
+  "letters": 0,
+  "ranges": [
+    "0x20-0x7f"
+  ],
+  "symbols": "",
+  "customparams": "--no-compress --no-prefilter",
+  "uploaded": false
+}

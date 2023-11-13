@@ -8,11 +8,16 @@ typedef struct user_data
     char postfix[10];
 } user_data_t;
 
-
 template_t ui_templates[3];
 
 static const char *TAG = "HA_TEMPLATE";
 
+/**
+ * Initializes the Home Assistant templates screen.
+ * This function is called once during setup to initialize the screen's UI elements and data.
+ * @param None
+ * @return None
+ */
 void init_templates()
 {
     // Small type
@@ -76,6 +81,20 @@ void init_templates()
     ui_templates[BT_LARGE].switch_ui.a_data_label_y = -50;
 }
 
+/**
+ * @brief Creates a button representing a Home Assistant sensor.
+ *
+ * @param size The size of the button.
+ * @param parent The parent object to which the button will be added.
+ * @param sensor The Home Assistant sensor to represent.
+ * @param bt_x The x-coordinate of the button.
+ * @param bt_y The y-coordinate of the button.
+ * @param text_color The color of the button text.
+ * @param name The name of the sensor.
+ * @param label The label of the sensor.
+ * @param unit The unit of measurement for the sensor.
+ * @param icon The icon representing the sensor.
+ */
 void create_sensor_button(int size, lv_obj_t *parent, ha_sensor_t *sensor, int bt_x, int bt_y, int text_color, char *name, char *label, char *unit, char *icon)
 {
     // ESP_LOGI(TAG, "create_sensor_button: name %s", name);
@@ -164,6 +183,16 @@ void create_sensor_button(int size, lv_obj_t *parent, ha_sensor_t *sensor, int b
     lv_obj_set_style_text_font(sensor->unit, &lv_font_montserrat_24, LV_PART_MAIN | LV_STATE_DEFAULT);
 }
 
+/**
+ * Creates a switch button with the specified size, label, and position, and adds it to the specified parent object.
+ *
+ * @param size The size of the switch button.
+ * @param parent The parent object to which the switch button will be added.
+ * @param switch_ A pointer to the ha_switch_t struct that contains the switch button's data.
+ * @param bt_x The x-coordinate of the switch button's position.
+ * @param bt_y The y-coordinate of the switch button's position.
+ * @param label The label to display next to the switch button.
+ */
 void create_switch_button(int size, lv_obj_t *parent, ha_switch_t *switch_, int bt_x, int bt_y, char *label)
 {
     // ESP_LOGI(TAG, "create_switch_button: label %s", label);
@@ -203,6 +232,16 @@ void create_switch_button(int size, lv_obj_t *parent, ha_switch_t *switch_, int 
     lv_obj_set_style_text_font(switch_->label, &lv_font_montserrat_18, LV_PART_MAIN | LV_STATE_DEFAULT);
 }
 
+/**
+ * Creates a switch toggle button with the specified size, parent, switch object, position, and label.
+ *
+ * @param size The size of the switch toggle button.
+ * @param parent The parent object of the switch toggle button.
+ * @param switch_ The switch object to be associated with the button.
+ * @param bt_x The x-coordinate of the button's position.
+ * @param bt_y The y-coordinate of the button's position.
+ * @param label The label to be displayed on the button.
+ */
 void create_switch_toggle(int size, lv_obj_t *parent, ha_switch_t *switch_, int bt_x, int bt_y, char *label)
 {
     // ESP_LOGI(TAG, "create_switch_toggle: label %s", label);
@@ -252,6 +291,14 @@ void create_switch_toggle(int size, lv_obj_t *parent, ha_switch_t *switch_, int 
     lv_obj_set_style_bg_opa(switch_->data, 255, LV_PART_INDICATOR | LV_STATE_CHECKED);
 }
 
+/**
+ * @brief Event handler for value changed events on the Home Assistant templates screen.
+ *
+ * This function is called when a button on the Home Assistant templates screen is clicked.
+ * It handles the button click event and update the data label of the button.
+ *
+ * @param e Pointer to the event object.
+ */
 void ui_event_btn(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -265,6 +312,17 @@ void ui_event_btn(lv_event_t *e)
 
 }
 
+/**
+ * Creates a switch arc object with a label and unit, and adds it to the given parent object.
+ *
+ * @param size The size of the switch arc.
+ * @param parent The parent object to add the switch arc to.
+ * @param switch_ The HA switch object to associate with the switch arc.
+ * @param bt_x The x-coordinate of the switch arc.
+ * @param bt_y The y-coordinate of the switch arc.
+ * @param label The label to display next to the switch arc.
+ * @param unit The unit to display next to the switch arc.
+ */
 void create_switch_arc(int size, lv_obj_t *parent, ha_switch_t *switch_, int bt_x, int bt_y, char *label, char *unit)
 {
     // ESP_LOGI(TAG, "create_switch_arc: label %s", label);
@@ -337,6 +395,17 @@ void create_switch_arc(int size, lv_obj_t *parent, ha_switch_t *switch_, int bt_
     lv_obj_add_event_cb(switch_->data, ui_event_btn, LV_EVENT_ALL, data);
 }
 
+/**
+ * Creates a switch slider with a label and unit.
+ *
+ * @param size The size of the switch slider.
+ * @param parent The parent object to which the switch slider will be added.
+ * @param switch_ The switch object to be created.
+ * @param bt_x The x-coordinate of the switch slider.
+ * @param bt_y The y-coordinate of the switch slider.
+ * @param label The label to be displayed next to the switch slider.
+ * @param unit The unit to be displayed next to the switch slider.
+ */
 void create_switch_slider(int size, lv_obj_t *parent, ha_switch_t *switch_, int bt_x, int bt_y, char *label, char *unit)
 {
     // ESP_LOGI(TAG, "create_switch_slider: label %s", label);

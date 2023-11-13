@@ -1,0 +1,16 @@
+{
+  "codename": "font4",
+  "ttf_path": "/assets/fonts/LibraSans-Bold.ttf",
+  "bin_path": "/assets/fonts/ui_font_font4.bin",
+  "c_path": "/assets/fonts/ui_font_font4.c",
+  "cfg_path": "/assets/fonts/ui_font_font4.fcfg",
+  "size": 120,
+  "bpp": 8,
+  "letters": 0,
+  "ranges": [
+    "0x20-0x7f"
+  ],
+  "symbols": "1234567890:°",
+  "customparams": "--no-compress --no-prefilter",
+  "uploaded": false
+}
