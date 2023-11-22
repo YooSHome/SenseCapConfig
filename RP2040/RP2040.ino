@@ -1,5 +1,4 @@
 #include "AHT20.h"
-#include <Adafruit_Sensor.h>
 #include <Arduino.h>
 #include <PacketSerial.h>
 #include <SD.h>

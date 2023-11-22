@@ -249,7 +249,7 @@ To build and flash the RP2040 for this project, follow these steps using the Ard
 4. **Select Board and Port**: In the Arduino IDE, search for and select the "Seeed INDICATOR RP2040" board. Then, choose the appropriate serial port (usually labeled as usbmodem).
 5. **Build and Flash**
 
-For more detailed instructions, including setting up the Arduino IDE and troubleshooting common issues, refer to the [Seeed Studio guide](https://wiki.seeedstudio.com/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware/#for-rp2040).
+For more detailed instructions, including setting up the Arduino IDE and troubleshooting common issues, refer to the [Seeed Studio guide](https://wiki.seeedstudio.com/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware/#for-rp2040) or [repo:SenseCAP Indicator RP2040](https://github.com/Seeed-Solution/SenseCAP_Indicator_RP2040).
 
 ### Build and Flash (ESP32)
 
@@ -261,4 +261,4 @@ To set up your ESP32 for this project, follow these steps:
 
 For a comprehensive walkthrough, refer to the detailed [Getting Started Guide with ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html). This guide covers everything from setting up the development environment to running your first project.
 
-For additional information and specific instructions for the SenseCAP Indicator project, consult the [Seeed Studio guide](https://wiki.seeedstudio.com/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware/#for-esp32-s3).
+For additional information and specific instructions for the SenseCAP Indicator project, consult the [Seeed Studio guide](https://wiki.seeedstudio.com/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware/#for-esp32-s3) or [repo:SenseCAP Indicator ESP32](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32).
