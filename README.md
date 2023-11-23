@@ -1,24 +1,44 @@
+
+<p align="center">
+  <img src="./logo.png" width="120" height="auto" alt="Senseconfig"/>
+</p>
+<div align="center">
+
 # Indicator Home Assistant with Configuration File
 
-<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png"/></div>
+✨This project is based on the example project for SenseCap Indicator with added Home Assistant functions.✨
 
-This project is based on the example project for SenseCap Indicator with added Home Assistant functions.
+</div>
 
-The main difference is the feature to load Indicator screens (sensor, switch, etc.) based on a configuration file. The configuration file is stored in the SDCard and can be modified by the user. The configuration file is in JSON format. The configuration file is loaded at startup.
+# Overview 
 
-Initial example look and feel used.
+<img align="right" width="240" src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png" style="border-radius:8px"/>This version introduces dynamic screen loading based on a user-modifiable configuration file in JSON format, stored on an SDCard. This file includes Indicator screens (e.g., sensor displays, switches) and Home Assistant connection details, eliminating the need for firmware recompilation when adding new items.
+
+<!-- The main difference is the feature to load Indicator screens (sensor, switch, etc.) based on a configuration file. The configuration file is stored in the SDCard and can be modified by the user. The configuration file is in JSON format. The configuration file is loaded at startup. -->
+
+***Initial example look and feel used:***
+
 <figure class="third">
-    <img src="./docs/Home Assistant Data.png" width="480"/>
-    <img src="./docs/Home Assistant.png" width="480"/>
-    <img src="./docs/Home Assistant Control(ON).png" width="480"/>
-    <img src="./docs/Home Assistant Control(OFF).png" width="480"/>
+    <img align="left" src="./docs/Home Assistant Data.png" width="240"/>
+    <img align="center" src="./docs/Home Assistant.png" width="240"/>
+    <img align="left" src="./docs/Home Assistant Control(ON).png" width="240"/>
+    <img align="center" src="./docs/Home Assistant Control(OFF).png" width="240"/>
 </figure>
 
 ## System Atrchitecture
 
 <img src="./docs/SenceCapConfig.png">
 
-## Global Functions
+## Core Functions
+
+- Real-time and historical data display for CO2, tVOC, temperature, and humidity.
+- Wi-Fi, display, and time settings configuration.
+- Home Assistant data integration and control functionality.
+
+<!-- ⛔️ MD-MAGIC-EXAMPLE:START (TOC:collapse=true&collapseText=Click to expand) -->
+<details>
+<summary>Click to see details🖱️</summary>
+
 - [x] Time display.
 - [x] CO2, tVOC, Temperature and Humidity data real-time display.
 - [x] CO2, tVOC, Temperature and Humidity history data display.
@@ -28,9 +48,21 @@ Initial example look and feel used.
 - [x] Home Assistant data.
 - [x] Home Assistant control.
 
-## Additional Features
+</details>
+<!-- ⛔️ MD-MAGIC-EXAMPLE:END -->
 
-In addition to the initial example, I added the possiblity to load screens with sensors and switches based on a configuration file. This JSON file contain as well the HA connection information (url, username, password). So there is no need to recompile the firmware to add new items. 
+## Enhanced Functionalities
+
+<!-- In addition to the initial example, I added the possiblity to load screens with sensors and switches based on a configuration file. This JSON file contain as well the HA connection information (url, username, password). So there is no need to recompile the firmware to add new items.  -->
+
+In addition to the core features, the project now supports:
+
+- Loading different screen types (e.g., 1x1, 1x2, 2x3) and UI elements (e.g., sensor displays, switch buttons) from the configuration file.
+- Easy modification of UI templates using squareline projects (located in the /squareline/ folder).
+
+<!-- ⛔️ MD-MAGIC-EXAMPLE:START (TOC:collapse=true&collapseText=Click to expand) -->
+<details>
+<summary>Click to see the supported types🖱️</summary>
 
 ### Screens types
 
@@ -53,18 +85,23 @@ Different type of pages are support defined as grid:
 4. Switch arc : Display a switch arc (Number type in mqtt)
 5. Switch dropdown : Display a switch dropdown (Selec type in mqtt)
 
-## How to modify the UI templates
+</details>
+<!-- ⛔️ MD-MAGIC-EXAMPLE:END -->
+
+## UI Template Customization
+
+### How to modify the UI templates
 
 The UI templates are based on squareline (see /squareline/ sub folder with projects) with different UI elements. 
 You can find few projects for large, medium and small screens. You can modify the UI elements, generate the code and modify the `./main/ui/screens/ui_sreen_ha_templates` files.
 
-## How to use this version
+### How to use this version
 
-Please first read the [User Guide](https://wiki.seeedstudio.com/SenseCAP_Indicator_Get_Started) of the SenseCAP Indicator Board to learn about its software and hardware information.
+Please first read the [User Guide](https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator/) of the SenseCAP Indicator Board to learn about its software and hardware information.
 
-### Configuration file JSON
+#### Configuration file JSON
 
-The configuration file is stored in the SDCard and load by the RP2040. The ESP32 MCU will request the configuration file from the RP2040 and generate screens, sensors and swtiches.
+The heart of this project's customization lies in the configuration file, which is stored on an SDCard and loaded by the RP2040(the ESP32 MCU will request the configuration file from the RP2040 and generate screens, sensors and swtiches.):
 
 Structure of the config file : 
 
@@ -107,7 +144,9 @@ Structure of the config file :
 }
 ```
 
-### Home Assistant Configuration (mqtt.yaml)
+You can see the example of the configuration file: [ha_config.json.template](./config/ha_config.json.template) file.
+
+## Home Assistant Configuration (mqtt.yaml)
 
 You need to configure Home assistant to receive and send data from/to the Indicator device. The following is an example of the mqtt.yaml file.
 
@@ -192,35 +231,34 @@ action:
       payload: "{\"<SENSOR_HA_KEY>\" : \"{{states('sensor.<HA_SENSOR_NAME>') }}\"}"
 mode: single
 ```
+## Building and Flashing Instructions
 
 ### Build and Flash (RP2040)
 
-The RP2030 is an aduino project. You can use the Arduino IDE to build and flash the project.
+To build and flash the RP2040 for this project, follow these steps using the Arduino IDE:
 
-Step 1: Install Arduino IDE
-Step 2: Add the Raspberry Pi Pico Board
-Step 3: Add the Libraries
--  LIBRARIES FOR REFERENCE
--  Sensirion Core: Sensirion Arduino Core library
--  PacketSerial : Serial communication protoco
--  Sensirion I2C SGP40 : SGP40 TVOC sensor library
--  Sensirion I2C SCD4x : SCD41 CO2 sensor library
--  Sensirion Gas Index Algorithm : Transfer index library
--  Seeed_Arduino_AHT20 : AHT20 temperature and humidity sensor library
+1. **Install Arduino IDE**
+2. **Add Raspberry Pi Pico Board**
+3. **Install Required Libraries**: Add the following libraries to your Arduino IDE to ensure compatibility with the project's sensors and functionalities:
+   - **Sensirion Core**: For core functionality of Sensirion sensors.
+   - **PacketSerial**: Enables serial communication.
+   - **Sensirion I2C SGP40**: Library for the SGP40 TVOC sensor.
+   - **Sensirion I2C SCD4x**: For the SCD41 CO2 sensor.
+   - **Sensirion Gas Index Algorithm**: Used for gas index calculations.
+   - **Seeed_Arduino_AHT20**: For the AHT20 temperature and humidity sensor.
+4. **Select Board and Port**: In the Arduino IDE, search for and select the "Seeed INDICATOR RP2040" board. Then, choose the appropriate serial port (usually labeled as usbmodem).
+5. **Build and Flash**
 
-Step 4: Select the board and port
-Search "Indicator" and select Seeed INDICATOR RP2040 board and select the usbmodem Serial Port.
-
-For more information : https://wiki.seeedstudio.com/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware/#for-rp2040
-
+For more detailed instructions, including setting up the Arduino IDE and troubleshooting common issues, refer to the [Seeed Studio guide](https://wiki.seeedstudio.com/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware/#for-rp2040) or [repo:SenseCAP Indicator RP2040](https://github.com/Seeed-Solution/SenseCAP_Indicator_RP2040).
 
 ### Build and Flash (ESP32)
 
-1. The project configure PSRAM with Octal 120M by default. please see [here](../../tools/patch/README.md#idf-patch) to enable `PSRAM Octal 120M` feature.
-2. Run `idf.py -p PORT flash monitor` to build, flash and monitor the project.
+To set up your ESP32 for this project, follow these steps:
 
-(To exit the serial monitor, type ``Ctrl-]``.)
+1. **Install ESP-IDF**: Begin by installing the ESP-IDF (Espressif IoT Development Framework) from the official [ESP-IDF Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html). This framework provides the necessary tools and libraries for ESP32 development.
 
-See the [Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html) for full steps to configure and use ESP-IDF to build projects.
+2. **Build, Flash, and Monitor**: Use the command `idf.py -p PORT flash monitor` in your terminal to build the project, flash it to the ESP32, and open the serial monitor. This command allows you to observe real-time logs from the ESP32. To exit the serial monitor, press `Ctrl-]`.
 
-For more information : https://wiki.seeedstudio.com/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware/#for-esp32-s3
+For a comprehensive walkthrough, refer to the detailed [Getting Started Guide with ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html). This guide covers everything from setting up the development environment to running your first project.
+
+For additional information and specific instructions for the SenseCAP Indicator project, consult the [Seeed Studio guide](https://wiki.seeedstudio.com/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware/#for-esp32-s3) or [repo:SenseCAP Indicator ESP32](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32).
